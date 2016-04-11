@@ -1,0 +1,17 @@
+<nav class="demo">
+  <a href="/" class="brand">
+    <span>Star Wars Voting</span>
+  </a>
+
+  <!-- responsive-->
+  <input id="bmenub" type="checkbox" class="show">
+  <label for="bmenub" class="burger pseudo button">menu</label>
+
+  <div class="menu">
+   <% if current_user.nil? %>
+     <a href="/auth/imgur" class="button">Login</a>
+   <% else %>
+     <a href="/logout" class="button">Logout of <%= current_user.name %></a>
+   <% end %>
+  </div>
+</nav>

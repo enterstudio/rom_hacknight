@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Star Wars Voting</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/g/picnicss@5.1.0(picnic.min.css+plugins.min.css)">
+    <style>
+      .container { margin: 0 auto; width: 90%; margin-top: 60px; }
+
+      @media only screen and (min-width : 1025px) {
+      .selection-box  { width: 25%; padding-top: 21px; }
+      }
+    </style>
+  </head>
+  <body>
+    <%= erb :'header' %>
+    <div class="container">      
+      <%= yield %>
+    </div>
+  </body>
+</html>

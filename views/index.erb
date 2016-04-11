@@ -1,0 +1,29 @@
+<div class="row two">
+  <div>
+    <h1>Rankings</h1>
+    <ol>
+      <% @votes.each do |v| %>
+        <li><%= name(v.character_id) %></li>
+      <% end %>
+    </ol>
+  </div>
+  <% unless current_user.nil? %>
+  <div class="selection-box">
+    <article class="card">
+      <form method="post">
+	<header>
+	  <h3>Your Selection</h3>
+	</header>
+	<footer>
+	  <select name="character_id">
+      <% @characters.each do |c| %>
+	     <option value="<%= c.id %>"><%= c.name %></option>
+      <% end %>
+	  </select>
+	  <button>Vote</button>
+	</footer>
+      </form>
+    </article>
+  </div>
+  <% end %>
+</div>
